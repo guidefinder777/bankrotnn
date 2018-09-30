@@ -1,0 +1,276 @@
+<html class="">
+<head>
+    <meta charset="utf-8">
+
+    <title>Контакты</title>
+
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+			<span class="navbar-brand" href="/">
+                <img src="/bundles/spbranch/img/okb.png?16-02-2018a"
+                     style="max-height: 100%">
+
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+		</span></div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                <li class="active">
+                    <a href="/contacts">Контакты</a>
+                </li>
+                <li>
+                    <a href="/tasks">Задачи</a>
+                </li>
+
+                <li>
+                    <a href="/deals">Сделки</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Отчёты <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/reports/royalty">Роялти</a></li>
+                        <li><a href="/reports/sales_funnel">Воронка продаж</a></li>
+                        <li><a href="/reports/by_deals">Отчёт по сделкам</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/classifiers/banks">Кредиторы</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <a href="/logout">
+                        Выход
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <div class="page-header">
+        <h2>Контакты</h2>
+    </div>
+
+
+    <div class="users_filter_form">
+        <form action="/contacts" method="get">
+            <input type="hidden" name="page" value="1">
+
+            <div class="input-group form-group">
+                <input autocomplete="off" type="text" placeholder="ФИО, телефон или e-mail"
+                       class="form-control input-lg" name="filters[q]" value="">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-lg"> <i
+                            class="glyphicon glyphicon-search"></i> </button>
+                </span>
+            </div>
+
+            <div class="form row">
+                <div class="form-group col-sm-2">
+                    <label>От</label>
+                    <div><input style="" type="text" name="filters[dateFrom]" class="form-control datepicker" value=""
+                                placeholder=""></div>
+                </div>
+                <div class="form-group col-sm-2">
+                    <label>До</label>
+                    <div><input style="" type="text" name="filters[dateTo]" class="form-control datepicker" value=""
+                                placeholder=""></div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label>Ответственный</label>
+                    <div><select name="filters[owner][]" class="select2-tags select2-hidden-accessible" multiple=""
+                                 tabindex="-1" aria-hidden="true">
+                        <option value="302">Шахов Владимир Игоревич</option>
+                        <option value="303">Клочков Павел Сергеевич</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                   style="width: 360px;"><span class="selection"><span
+                            class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li
+                            class="select2-search select2-search--inline"><input class="select2-search__field"
+                                                                                 type="search" tabindex="0"
+                                                                                 autocomplete="off" autocorrect="off"
+                                                                                 autocapitalize="off" spellcheck="false"
+                                                                                 role="textbox" aria-autocomplete="list"
+                                                                                 placeholder="" style="width: 0.75em;"></li></ul></span></span><span
+                            class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <button type="submit" class="btn btn-default">Применить</button>
+                <button class="btn" name="filters[clear]" type="submit">Сбросить</button>
+            </div>
+            <div class="clearfix"></div>
+        </form>
+    </div>
+
+    <div class="list_pagination_block">
+        <div class="list_pagination_block_actions">
+            <a class="btn btn-success pull-right" href="/contact/anketa.html">Новый контакт</a>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="text-center">
+            <ul class="pagination">
+                <li class="disabled">
+                    <a href="/contacts?page=1">«</a>
+                </li>
+
+                <li class="disabled">
+                    <a>←</a>
+                </li>
+
+                <li class="active">
+                    <a href="/contacts?page=1">
+                        1
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/contacts?page=2">
+                        2
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/contacts?page=3">
+                        3
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/contacts?page=4">
+                        4
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/contacts?page=5">
+                        5
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="/contacts?page=2">→</a>
+                </li>
+
+                <li class="">
+                    <a href="/contacts?page=5">»</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <table class="users_list table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Контакт</th>
+
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Ответственный</th>
+            <th>Сделки</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="tr-template hide">
+            <td>
+                <a class="user-link" href=""></a>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <!--<a href="/deals/8594" target="_blank">Дерюгина Лидия Витальевна - Банкротство ФЛ</a><br>-->
+            </td>
+            <td class="text-right">
+                <nobr>
+                    <a class="btn btn-primary js_edit_contact" href="">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a class="btn btn-danger js_remove_contact" data-fio="" data-id="">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </nobr>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <ul class="pagination">
+            <li class="disabled">
+                <a href="/contacts?page=1">«</a>
+            </li>
+
+            <li class="disabled">
+                <a>←</a>
+            </li>
+
+            <li class="active">
+                <a href="/contacts?page=1">
+                    1
+                </a>
+            </li>
+            <li class="">
+                <a href="/contacts?page=2">
+                    2
+                </a>
+            </li>
+            <li class="">
+                <a href="/contacts?page=3">
+                    3
+                </a>
+            </li>
+            <li class="">
+                <a href="/contacts?page=4">
+                    4
+                </a>
+            </li>
+            <li class="">
+                <a href="/contacts?page=5">
+                    5
+                </a>
+            </li>
+
+            <li class="">
+                <a href="/contacts?page=2">→</a>
+            </li>
+
+            <li class="">
+                <a href="/contacts?page=5">»</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/contact/contacts.js">   </script>
+
+</body>
+</html>

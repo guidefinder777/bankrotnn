@@ -1,0 +1,231 @@
+.list_pagination_block {
+    position: relative;
+    min-height: 60px;
+}
+.list_pagination_block_actions {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+.list_pagination_block .pagination {
+    margin: 20px 0;
+}
+
+.phone-block .col-sm-10, .email-block .col-sm-10 {
+    padding-left: 0;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+}
+
+.page-header {
+    margin-top: 0px;
+}
+
+.back-url {
+    margin-right: 10px;
+}
+
+.type-many {
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #D8D6D6;
+    margin-bottom: 5px;
+    position: relative;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
+.remove-gist {
+    /*color: red;*/
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.contact-search-block {
+    margin-bottom: 15px;
+}
+
+.contact-search-block .field-block {
+    display: inline-block;
+}
+.contact-search-block .field-block label{
+    margin-right: 5px;
+}
+.contact-search-block .field-block-right-margin {
+    margin-right: 10px;
+}
+
+.deal-contacts-list {
+    margin-bottom: 40px;
+}
+.deal-contacts-list .deal-contacts:first-child {
+    border-top: 1px solid #ccc;
+}
+.deal-contacts-list .deal-contacts {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+.contact-search-block {
+    padding-bottom: 30px;
+}
+.form-group {
+    /*    position: relative;*/
+}
+
+.gist_block {
+    padding-left:15px
+}
+
+.gist {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ededed;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.js_add_gist:hover,
+.js_add_gist:focus {
+    text-decoration: none !important;
+}
+
+.field_scan{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ededed;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.select2-selection{
+    min-height:38px !important;
+}
+
+.select2-selection__rendered{
+    margin-top: 4px !important;
+    margin-left: 8px !important;
+}
+
+.deals_filter_form div.form-group {
+    margin-bottom: 10px;
+}
+
+.selection {
+    font-size: 12px;
+}
+
+.tasks_filter_form .form > div {
+    margin-bottom: 10px;
+}
+.tasks_filter_form .select2-selection__rendered{
+    margin-top: 2px !important;
+    margin-left: 4px !important;
+}
+#sipuni_block {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    padding: 5px 10px;
+    width: 286px;
+    min-height: 50px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: none;
+    background-color: #fff;
+    z-index: 10000;
+}
+#sipuni_block .glyphicon-phone {
+    font-size: 24px;
+    margin-top: 5px;
+    float: left;
+}
+.sipuni__event {
+    margin-left: 45px;
+}
+.sipuni__event .source {
+    color: #767676;
+}
+.hyperscript__box {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+}
+.hypersript__frame {
+    position: absolute;
+    width: 90%;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -45%;
+    z-index: 10000;
+    padding-top: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 14px 24px 1px rgba(0,0,0,.1);
+}
+.hypersript__frame iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.select2-dropdown {
+    z-index: 12123123!important;
+}
+
+.sipuni_block--left {
+    width: 44px;
+}
+.select2-result-repository__fio {
+    font-size: 12px;
+}
+.select2-result-repository__phones {
+    font-size: 11px;
+}
+
+#sipuni_block .contact-edit .text-danger{
+    font-size: 11px;
+}
+#sipuni_block .contact-edit .input-group {
+    margin-bottom: 5px;
+}
+.filter-branches ,
+.filter-decisions ,
+.filter-types {
+    width: 100%!important;
+}
+.filter-branches .input-group-addon,
+.filter-decisions .input-group-addon,
+.filter-types .input-group-addon {
+    width: 38px!important;
+}
+.filter-branches .select2-container,
+.filter-decisions .select2-container,
+.filter-types .select2-container{
+    width: 100%!important;
+}
+.filter-branches .select2-container--default .select2-selection--multiple,
+.filter-decisions .select2-container--default .select2-selection--multiple,
+.filter-types .select2-container--default .select2-selection--multiple{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.select2-tags{
+    width: 100%;
+    height:37px !important;
+    /*display:none;*/
+}
+
+.select2-tags option{
+    display:none;
+}

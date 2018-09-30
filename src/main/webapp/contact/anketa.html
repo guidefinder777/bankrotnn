@@ -1,0 +1,478 @@
+<html class="">
+<head>
+    <meta charset="utf-8">
+
+    <title>Контакты</title>
+
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css"
+          rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+          rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+			<span class="navbar-brand" href="/">
+															<img src="/bundles/spbranch/img/okb.png?16-02-2018a"
+                                                                 style="max-height: 100%">
+
+
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+		</span></div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                <li class="active">
+                    <a href="/contacts">Контакты</a>
+                </li>
+                <li>
+                    <a href="/tasks">Задачи</a>
+                </li>
+
+                <li>
+                    <a href="/deals">Сделки</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Отчёты <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/reports/royalty">Роялти</a></li>
+                        <li><a href="/reports/sales_funnel">Воронка продаж</a></li>
+                        <li><a href="/reports/by_deals">Отчёт по сделкам</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/classifiers/banks">Кредиторы</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <a href="/logout">
+                        Выход
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
+        <li class="active">Новый контакт</li>
+    </ol>
+
+    <div class="page-header">
+        <a href="/contacts.html" class="pull-left btn btn-primary back-url"><i
+                class="glyphicon glyphicon-arrow-left"></i>
+            Назад</a>
+        <h2>Контакты</h2>
+    </div>
+
+
+    <form class="form js_contacts_edit_form">
+        <input type="hidden" name="id" id="id" value="">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-lg-5">
+                    <label for="last_name" class="">Фамилия</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name" value=""
+                           placeholder="Фамилия">
+                </div>
+                <div class="col-lg-5">
+                    <label for="last_name_accusative" class="">Фамилия (винительный падеж, в лице...)</label>
+                    <input type="text" class="form-control" name="last_name_accusative" id="last_name_accusative"
+                           value="" placeholder="например, Иванова">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-lg-5">
+                    <label for="first_name" class="-2 ">Имя</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name" value=""
+                           placeholder="Имя">
+                </div>
+                <div class="col-lg-5">
+                    <label for="first_name_accusative" class="-2 ">Имя (винительный падеж, в лице...)</label>
+                    <input type="text" class="form-control" name="first_name_accusative" id="first_name_accusative"
+                           value="" placeholder="Ивана">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-lg-5">
+                    <label for="middle_name" class="-2 ">Отчество</label>
+                    <input type="text" class="form-control" name="middle_name" id="middle_name" value=""
+                           placeholder="Отчество">
+                </div>
+                <div class="col-lg-5">
+                    <label for="middle_name_accusative" class="-2 ">Отчество (винительный падеж, в лице...)</label>
+                    <input type="text" class="form-control" name="middle_name_accusative" id="middle_name_accusative"
+                           value="" placeholder="Ивановича">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="middle_name" class="-2">Прошлые ФИО (все прежние фамилии, если не изменял - указать об
+                этом)</label>
+            <div class="-10">
+                <input type="text" class="form-control" name="previous_names" id="previous_names" value=""
+                       placeholder="Прошлые ФИО">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="-2">Пол</label>
+            <div class="-10">
+                <label for="male" class="radio-inline">
+                    <input type="radio" name="gender" id="male" value="male"> Мужской
+                </label>
+                <label for="female" class="radio-inline">
+                    <input type="radio" name="gender" id="female" value="female"> Женский
+                </label>
+                <div class="js_gender_error"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date_of_birth" class="-2">Дата рождения</label>
+            <div class="-10">
+                <div class="input-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <input type="text" class="form-control datepicker" name="date_of_birth" id="date_of_birth" value=""
+                           placeholder="Дата рождения">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="actual_address" class="-2">Адрес фактический</label>
+            <div class="-10">
+                <input type="text" class="form-control" name="actual_address" id="actual_address" value=""
+                       placeholder="Адрес фактический">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comment" class="-2">Комментарий</label>
+            <div class="-10">
+                <input type="text" class="form-control" name="comment" id="comment" value="" placeholder="Комментарий">
+            </div>
+        </div>
+        <div class="form-group  field_scan">
+            <label for="email" class="-2">E-mail</label>
+            <div class="form-group row email-block">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control email" name="email[0]" id="email-0" value=""
+                           placeholder="E-mail">
+                    <div class="js_main_email_error"></div>
+                </div>
+                <div class="radio col-sm-2">
+                    <label>
+                        <input type="radio" name="main_email" value="0" checked="">Основной
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <a href="#" style="border-bottom: 1px dashed blue" class="add-field" data-target=".email">+Добавить
+                        еще один email</a>
+                </div>
+            </div>
+            <div class="js_email_error"></div>
+        </div>
+
+
+        <div class="form-group   field_scan ">
+            <label for="phone" class="-2">Телефоны</label>
+            <div class="row phone-block form-group">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control phone" name="phone[0]" id="phone-0" value=""
+                           placeholder="Телефон">
+                    <div class="js_main_phone_error"></div>
+                </div>
+                <div class="col-sm-2">
+                    <select name="type[1]" class="form-control type">
+                        <option value="work">Рабочий</option>
+                        <option value="home">Домашний</option>
+                        <option value="mobile">Мобильный</option>
+                    </select>
+                </div>
+                <div class="radio col-sm-2">
+                    <label>
+                        <input type="radio" name="main_phone" value="0" checked="">Основной
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <a href="#" style="border-bottom: 1px dashed blue" class="add-field" data-target=".phone">+Добавить
+                        еще один телефон</a>
+                </div>
+            </div>
+            <div class="js_phone_error"></div>
+        </div>
+
+
+        <hr>
+
+        <h3>Паспортные данные</h3>
+        <div class="row field_scan">
+            <div class="col-sm-6">
+                <h4>Паспорт</h4>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="series" class="-3">Серия</label>
+                            <div class="">
+                                <input type="text" class="form-control" name="series" id="series" value=""
+                                       placeholder="Серия">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <label for="number" class="-3">Номер</label>
+                            <div class="">
+                                <input type="text" class="form-control" name="number" id="number" value=""
+                                       placeholder="Номер">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="issued_by" class="-3">Кем выдан</label>
+                    <div class="">
+                        <input type="text" class="form-control" name="issued_by" id="issued_by" value=""
+                               placeholder="Кем выдан">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="issued_date" class="-3">Дата выдачи</label>
+                    <div class="-9">
+                        <div class="input-group input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            <input type="text" class="form-control datepicker" name="issued_date" id="issued_date"
+                                   value="" placeholder="Дата выдачи">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subdivision_code" class="-3">Код подразделения</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="subdivision_code" id="subdivision_code" value=""
+                               placeholder="Код подразделения">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="place_of_birth" class="-3">Место рождения</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" value=""
+                               placeholder="Место рождения">
+                    </div>
+                </div>
+                <div class="form-group" style="">
+                    <label class="-3">Сканы паспорта</label>
+                    <div class="-9">
+                        <div class="js_contact_passport_zone js_contact_passport_zone admin_image_zone" data-index="">
+                            <div class="admin_image_block js_admin_image_block" data-id="null"
+                                 data-token="20180928201911_contact_passport_c020305d69eb1ee1307e412a0b26eeba"
+                                 style="display: none;">
+                                <a class="admin_image_show_link"
+                                   href="/upload/tmp//img_20180928201911_contact_passport_c020305d69eb1ee1307e412a0b26eeba_orig.png"
+                                   rel="admin_image_block">
+                                    <img width="200" height="70" class="img-thumbnail"
+                                         src="/upload/tmp//img_20180928201911_contact_passport_c020305d69eb1ee1307e412a0b26eeba_edit_image.png?1538165950398"
+                                         data-placeholder="http://placehold.it/70x70">
+                                </a>
+                                <a href="#" class="admin_image_delete_link js_admin_image_delete_link"></a>
+                                <input type="text" style="font-size: 12px;height: 30px;" class="form-control one "
+                                       name="scan[null][]" value="img-2018-09-27-23-42-40" placeholder="Имя документа">
+                            </div>
+                        </div>
+                        <div class="js_contact_passport_button js_contact_passport_button admin_image_button"
+                             data-index="">
+                            <div class="qq-upload-button qq-post-button btn btn-sm btn-success"
+                                 style="position: relative; overflow: hidden; direction: ltr;">
+                                Загрузить
+                                <input multiple="multiple" type="file" name="file"
+                                       style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+                            </div>
+                            <div class="qq-upload-drop-area" style="display: none;">
+                                <span>Drop files here to upload</span></div>
+                            <ul class="qq-upload-list" style="display: none;">
+                                <li class=" qq-upload-success"><span class="qq-progress-bar"
+                                                                     style="width: 100%;"></span><span
+                                        class="qq-upload-finished"></span><span class="qq-upload-file">img-2018-09-27-23-42-40.png</span><span
+                                        class="qq-upload-size" style="display: inline;">56.0kB</span><span
+                                        class="qq-upload-failed-text">Загрузка не удалась</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4>Адрес регистрации</h4>
+
+                <div class="form-group">
+                    <label for="reg_address_index" class="-3">Индекс</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="reg_address_index" id="registration_address"
+                               value="" placeholder="Индекс">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg_address_region" class="-3">Субьект РФ</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="reg_address_region" id="reg_address_region"
+                               value="" placeholder="Субьект РФ">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg_address_district" class="-3">Район</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="reg_address_district" id="reg_address_district"
+                               value="" placeholder="Район">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg_address_city" class="-3">Город</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="reg_address_city" id="reg_address_city" value=""
+                               placeholder="Город">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg_address_settlement" class="-3">Населённый пункт</label>
+                    <div class="-9">
+                        <input type="text" class="form-control" name="reg_address_settlement"
+                               id="reg_address_settlement" value="" placeholder="Населённый пункт">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="reg_address_street_type" class="-3">Тип</label>
+                            <div class="-9">
+                                <select type="text" class="form-control" name="reg_address_street_type"
+                                        id="reg_address_street_type">
+                                    <option value=""></option>
+                                    <option value="1">Аллея</option>
+                                    <option value="2">Бульвар</option>
+                                    <option value="3">Дорога</option>
+                                    <option value="11">Линия</option>
+                                    <option value="12">Микрорайон</option>
+                                    <option value="4">Переулок</option>
+                                    <option value="5">Площадь</option>
+                                    <option value="6">Проезд</option>
+                                    <option value="7">Проспект</option>
+                                    <option value="8">Тупик</option>
+                                    <option value="9" selected="">Улица</option>
+                                    <option value="10">Шоссе</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label for="reg_address_street" class="-3">Улица</label>
+                            <div class="-9">
+                                <input type="text" class="form-control" name="reg_address_street"
+                                       id="reg_address_street" value="" placeholder="Улица">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="reg_address_house" class="-5">Дом</label>
+                            <div class="-7">
+                                <input type="text" class="form-control" name="reg_address_house" id="reg_address_house"
+                                       value="" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="reg_address_corp" class="-5">Корпус</label>
+                            <div class="-7">
+                                <input type="text" class="form-control" name="reg_address_corp" id="reg_address_corp"
+                                       value="" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="reg_address_flat" class="-5">Квартира</label>
+                            <div class="-7">
+                                <input type="text" class="form-control" name="reg_address_flat" id="reg_address_flat"
+                                       value="" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="form-group row">
+            <div class="col-sm-offset-5 col-sm-2">
+                <div class="js_glob_error"></div>
+                <button type="submit" class="btn btn-primary">Сохранить контакт</button>
+            </div>
+        </div>
+    </form>
+    <div class="hidden" id="phoneTpl">
+        <div class="row form-group {class}">
+            <div class="col-sm-4">
+                <input type="text" class="form-control phone" name="phone[{id}]" id="phone-{id}" value=""
+                       placeholder="Телефон">
+            </div>
+            <div class="col-sm-2">
+                <select name="type[{id}]" class="form-control type">
+                    <option value="work">Рабочий</option>
+                    <option value="home">Домашний</option>
+                    <option value="mobile">Мобильный</option>
+                </select>
+            </div>
+            <div class="radio col-sm-2">
+                <label>
+                    <input type="radio" name="main_phone" value="{id}">Основной
+                </label>
+            </div>
+            <div class="col-sm-1">
+                <button type="button" class="btn btn-danger remove">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/locale/ru.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/js/select2/select2.js"></script>
+<script type="text/javascript" src="/js/contact/anketa.js"></script>
+</body>
+</html>
