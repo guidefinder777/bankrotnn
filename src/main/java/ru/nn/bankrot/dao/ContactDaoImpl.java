@@ -72,7 +72,7 @@ public class ContactDaoImpl implements ContactDao {
     }
 
     @Override
-    @Transactional(readOnly = false)
+    @Transactional
     public void delete(ContactEntity contactEntity){
         sessionFactory.getCurrentSession().delete(contactEntity);
     }
