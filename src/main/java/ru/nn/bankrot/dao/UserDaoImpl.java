@@ -47,7 +47,7 @@ public class UserDaoImpl implements UserDao {
     @Transactional
     @Override
     public UserEntity findByUserName(String name) {
-        return (UserEntity) getCurrent().createQuery("from user where fio=:fio ", UserEntity.class)
-                .setParameter("fio", name).getSingleResult();
+        return (UserEntity) getCurrent().createQuery("from user where email=:email ", UserEntity.class)
+                .setParameter("email", name).getSingleResult();
     }
 }
